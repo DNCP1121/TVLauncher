@@ -2,15 +2,15 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"  android:id="@+id/main_container"
-    android:layout_width="match_parent" android:layout_height="match_parent">
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:orientation="vertical">
 
-    <com.zxh.soj.view.viewpager.TabPageIndicator
+    <tvlauncher1.tvbox.android.com.tvlauncher.viewpager.TabPageIndicator
         android:id="@+id/main_indicator"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/main_backgroup" />
+        android:layout_height="wrap_content" />
 
-    <ViewPager android:id="@+id/main_pager"
+    <android.support.v4.view.ViewPager android:id="@+id/main_pager"
         android:layout_width="match_parent" android:layout_height="match_parent"
         tools:context=".MainActivity" tools:deviceIds="tv" tools:ignore="MergeRootFrame"
         />
