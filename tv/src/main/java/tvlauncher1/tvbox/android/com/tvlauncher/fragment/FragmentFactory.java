@@ -1,6 +1,7 @@
 package tvlauncher1.tvbox.android.com.tvlauncher.fragment;
 
 import android.support.v4.app.Fragment;
+import tvlauncher1.tvbox.android.com.tvlauncher.fragment.RecommendFragment;
 /**
  * init and return fragment objects
  * Created by nana on 2016/5/8.
@@ -10,14 +11,14 @@ public class FragmentFactory {
 
     private Fragment mRecommendFragment; //
     private Fragment mMediaFragment;
-    private Fragment mPopularizeFragment;
+    private Fragment mStoreFragment;
     private Fragment mAppFragment;
 
 
     public void initFirstLevelFragments(){
         mRecommendFragment = new RecommendFragment();
         mMediaFragment = new MediaFragment();
-        mPopularizeFragment = new PopularizeFragment();
+        mStoreFragment = new StoreFragment();
         mAppFragment = new AppFragment();
     }
 
@@ -28,7 +29,7 @@ public class FragmentFactory {
             case 1:
                 return mMediaFragment;
             case 2:
-                return mPopularizeFragment;
+                return mStoreFragment;
             case 3:
                 return mAppFragment;
         }

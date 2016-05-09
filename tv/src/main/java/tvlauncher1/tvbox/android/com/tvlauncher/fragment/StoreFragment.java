@@ -1,9 +1,8 @@
 package tvlauncher1.tvbox.android.com.tvlauncher.fragment;
 
+import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.os.Bundle;
-import android.text.Layout;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -14,7 +13,7 @@ import tvlauncher1.tvbox.android.com.tvlauncher.utils.Constants;
 /**
  * Created by nana on 2016/5/8.
  */
-public class RecommendFragment extends BaseFragment {
+public class StoreFragment extends BaseFragment {
 
     private View mMainView;
 
@@ -28,8 +27,7 @@ public class RecommendFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mMainView = LayoutInflater.from(getActivity()).inflate(R.layout.recommend_fragment , null);
-        setTitle(mMainView , Constants.PAGE_CATEGORY.PAGE_RECOMMEND);
+        setTitle(mMainView , Constants.PAGE_CATEGORY.PAGE_STORE);
         return mMainView;
     }
-
 }

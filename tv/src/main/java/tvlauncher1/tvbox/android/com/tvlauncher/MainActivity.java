@@ -21,6 +21,7 @@ import android.support.v4.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 
 import tvlauncher1.tvbox.android.com.tvlauncher.fragment.FragmentFactory;
+import tvlauncher1.tvbox.android.com.tvlauncher.viewpager.PageIndicator;
 import tvlauncher1.tvbox.android.com.tvlauncher.viewpager.TabPageIndicator;
 
 /*
@@ -34,7 +35,9 @@ public class MainActivity extends FragmentActivity {
     private FragmentFactory mFragmentFactory;
     private FragmentPagerAdapter mAdapter;
     private ViewPager mPager;
-    private TabPageIndicator mIndicator;
+    private String[] mContent;
+//    private TabPageIndicator mIndicator;
+//    private ViewPagerIndicator mIndicator;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -42,6 +45,8 @@ public class MainActivity extends FragmentActivity {
         setContentView(R.layout.activity_main);
 
         initViews();
+
+        mContent = getResources().getStringArray(R.array.title_arrays);
 
         mFragmentFactory = new FragmentFactory();
         mFragmentFactory.initFirstLevelFragments();
@@ -56,14 +61,20 @@ public class MainActivity extends FragmentActivity {
             public int getCount() {
                 return 4;
             }
+
+            @Override
+            public CharSequence getPageTitle(int position) {
+                return mContent[position % mContent.length].toUpperCase();
+            }
         };
 
         mPager = (ViewPager) findViewById(R.id.main_pager);
         mPager.setOffscreenPageLimit(4);
         mPager.setAdapter(mAdapter);
 
-        mIndicator = (TabPageIndicator) findViewById(R.id.main_indicator);
-        mIndicator.setViewPager(mPager);
+//        mIndicator = (ViewPagerIndicator) findViewById(R.id.main_indicator);
+//        mIndicator.setViewPager(mPager);
+
         mPager.setCurrentItem(0, true);
 
     }

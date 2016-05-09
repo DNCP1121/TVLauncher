@@ -3,18 +3,72 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"  android:id="@+id/main_container"
     android:layout_width="match_parent" android:layout_height="match_parent"
-    android:orientation="vertical">
+    android:orientation="vertical"
+    android:background="#0000ff"
+    tools:context=".MainActivity" tools:deviceIds="tv" tools:ignore="MergeRootFrame"
+    android:paddingLeft="@dimen/main_padding_dp"
+    android:paddingRight="@dimen/main_padding_dp">
 
-    <tvlauncher1.tvbox.android.com.tvlauncher.viewpager.TabPageIndicator
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/dp5">
+        <ImageView
+            android:layout_width="@dimen/image_width_dp"
+            android:layout_height="@dimen/image_height_dp"
+            android:background="#ffffff"
+            android:layout_gravity="left"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="right">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:textSize="16sp"
+                android:text="深圳23-29 多云 "/>
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <!--<tvlauncher1.tvbox.android.com.tvlauncher.viewpager.TabPageIndicator-->
+   <!-- <ViewPagerIndicator
         android:id="@+id/main_indicator"
         android:layout_width="fill_parent"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" />-->
 
     <android.support.v4.view.ViewPager android:id="@+id/main_pager"
-        android:layout_width="match_parent" android:layout_height="match_parent"
-        tools:context=".MainActivity" tools:deviceIds="tv" tools:ignore="MergeRootFrame"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
         />
 
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="right"
+        android:layout_marginBottom="@dimen/dp5">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#ffffff"
+            android:textSize="16sp"
+            android:text="2016/04/20/15:14"
+            />
+    </LinearLayout>
 </LinearLayout>
 
 

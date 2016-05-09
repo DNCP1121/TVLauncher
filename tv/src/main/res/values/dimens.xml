@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="blank_dp">5dp</dimen>
+    <dimen name="image_width_dp">155dp</dimen>
+    <dimen name="image_height_dp">35dp</dimen>
+    <dimen name="main_padding_dp">35dp</dimen>
+    <dimen name="dp5">5dp</dimen>
+</resources>

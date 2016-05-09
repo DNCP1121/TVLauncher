@@ -1,6 +1,12 @@
 <resources>
     <string name="app_name">TVLauncher</string>
-    <string name="browse_title"><![CDATA[Videos by Your Company]]></string>
+
+    <string name="recommend_str">推荐</string>
+    <string name="media_str">影视</string>
+    <string name="store_str">商城</string>
+    <string name="app_str">应用</string>
+
+    <!--<string name="browse_title"><![CDATA[Videos by Your Company]]></string>
     <string name="related_movies">Related Videos</string>
     <string name="vertical_grid_title"><![CDATA[Vertical Video Grid]]></string>
     <string name="error">Error</string>
@@ -30,11 +36,11 @@
     <string name="start_position">startPosition</string>
     <string name="search_results">Search Results</string>
 
-    <!-- Error messages -->
+    &lt;!&ndash; Error messages &ndash;&gt;
     <string name="video_error_media_load_timeout">Media loading timed out</string>
     <string name="video_error_server_inaccessible">Media server was not reachable</string>
     <string name="video_error_unknown_error">Failed to load video</string>
     <string name="error_fragment_message">An error occurred</string>
     <string name="dismiss_error">Dismiss</string>
-    <string name="oops">Oops</string>
+    <string name="oops">Oops</string>-->
 </resources>
